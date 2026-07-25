@@ -7,6 +7,7 @@ export default function Contact() {
         Get in touch
       </p>
       
+        <a
         href={`mailto:${profile.email}`}
         className="font-display font-bold text-2xl md:text-4xl hover:text-orange transition-colors inline-block break-all"
       >

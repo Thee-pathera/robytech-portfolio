@@ -48,6 +48,7 @@ export default function Work() {
 
               {p.link && (
                 
+                  <a
                   href={p.link}
                   target="_blank"
                   rel="noreferrer"

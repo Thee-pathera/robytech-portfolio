@@ -15,6 +15,7 @@ export default function Hero() {
 
       <div className="flex items-center gap-5">
         
+          <a
           href={profile.github}
           target="_blank"
           rel="noreferrer"
@@ -26,6 +27,7 @@ export default function Hero() {
           </svg>
         </a>
         
+          <a
           href={`mailto:${profile.email}`}
           className="font-mono text-xs uppercase tracking-widest border-2 border-ink px-4 py-2 hover:bg-orange hover:border-orange hover:text-white transition-colors"
         >
