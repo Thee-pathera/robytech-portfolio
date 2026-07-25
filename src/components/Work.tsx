@@ -1,60 +1,66 @@
 import { projects } from "../data/content";
 
+const accents = ["orange", "green"];
+
 export default function Work() {
   return (
-    <section id="work" className="px-6 md:px-16 py-24 border-b border-line">
-      <p className="font-mono text-xs tracking-widest text-amber uppercase mb-12">
+    <section className="px-6 md:px-16 py-16 md:py-24">
+      <p className="font-mono text-xs tracking-widest text-muted uppercase mb-10">
         Selected work
       </p>
 
-      <div className="space-y-px">
-        {projects.map((p) => (
-          <div
-            key={p.id}
-            className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 py-8 border-t border-line first:border-t-0 group"
-          >
-            <div className="md:col-span-1 font-mono text-sm text-muted">
-              {p.id}
-            </div>
+      <div className="grid md:grid-cols-2 gap-8">
+        {projects.map((p, i) => {
+          const accent = accents[i % accents.length];
+          return (
+            <div
+              key={p.id}
+              className={`border-2 border-ink p-8 flex flex-col justify-between hover:-translate-y-1 transition-transform ${
+                accent === "orange" ? "hover:border-orange" : "hover:border-green"
+              }`}
+            >
+              <div>
+                <div className="flex items-baseline justify-between mb-4">
+                  <h3 className="font-display font-bold text-2xl md:text-3xl">
+                    {p.title}
+                  </h3>
+                  <span className="font-mono text-xs text-muted">{p.id}</span>
+                </div>
 
-            <div className="md:col-span-3">
-              <h3 className="font-display text-2xl">{p.title}</h3>
-              <p className="font-mono text-xs text-muted mt-1">
-                {p.role} — {p.year}
-              </p>
-            </div>
+                <p className="font-mono text-xs text-muted uppercase tracking-wide mb-4">
+                  {p.role}
+                </p>
 
-            <div className="md:col-span-5 space-y-2">
-              <p className="text-sm text-paper/90">
-                <span className="text-muted">Problem — </span>
-                {p.problem}
-              </p>
-              <p className="text-sm text-paper/90">
-                <span className="text-muted">Outcome — </span>
-                {p.outcome}
-              </p>
-            </div>
+                <p className="text-sm text-ink/80 mb-3">{p.problem}</p>
+                <p className="text-sm text-ink/80 mb-6">{p.outcome}</p>
 
-            <div className="md:col-span-3 flex flex-wrap content-start gap-2">
-              {p.stack.map((s) => (
-                <span
-                  key={s}
-                  className="font-mono text-xs px-2 py-1 border border-line text-muted"
-                >
-                  {s}
-                </span>
-              ))}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {p.stack.map((s) => (
+                    <span
+                      key={s}
+                      className="font-mono text-xs px-2 py-1 border border-line text-muted"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
               {p.link && (
-                <a
+                
                   href={p.link}
-                  className="font-mono text-xs text-teal hover:underline block mt-2"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`font-mono text-xs uppercase tracking-widest font-bold ${
+                    accent === "orange" ? "text-orange" : "text-green"
+                  } hover:underline`}
                 >
-                  view →
+                  View live →
                 </a>
               )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

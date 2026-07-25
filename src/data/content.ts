@@ -1,13 +1,16 @@
-// Edit everything in this file — it's the only place you should need to touch
-// for content changes. Components just render this data.
+// ============================================
+// EDIT EVERYTHING BELOW to change site content.
+// Components just render this data.
+// ============================================
 
 export const profile = {
-  name: "Your Name",
-  tagline: "I build [what] for [who].", // e.g. "I build booking systems for small service businesses"
+  brand: "ROBY TECH",
+  name: "Philip Mbeta",
   location: "Nairobi, Kenya",
-  email: "you@example.com",
-  github: "https://github.com/yourhandle",
-  linkedin: "https://linkedin.com/in/yourhandle",
+  email: "admin.robytech@gmail.com",
+  github: "https://github.com/Thee-pathera",
+  githubHandle: "Thee-pathera",
+  linkedin: "https://www.linkedin.com/in/p-mbeta-b040292b1",
 };
 
 export type Project = {
@@ -18,37 +21,25 @@ export type Project = {
   outcome: string;
   stack: string[];
   link?: string;
-  year: string;
 };
 
 export const projects: Project[] = [
   {
     id: "01",
-    title: "Project Name",
-    role: "Primary developer",
-    problem: "One sentence: what broke or was missing before this existed.",
-    outcome: "One sentence: what changed as a result, ideally with a number.",
-    stack: ["React", "TypeScript", "Supabase"],
-    link: "",
-    year: "2026",
+    title: "Brass Harmony",
+    role: "Sole developer",
+    problem: "Client had an online presence but no official, structured way to interact with clients and students.",
+    outcome: "Built booking, lessons, events, and messaging — interactions moved from ad hoc contact to a real system.",
+    stack: ["React", "TypeScript", "Vite", "Supabase"],
+    link: "https://brass-harmony-trombonist-site.vercel.app/",
   },
   {
     id: "02",
-    title: "Project Name",
-    role: "Primary developer",
-    problem: "",
-    outcome: "",
-    stack: [],
-    link: "",
-    year: "2026",
+    title: "Iron Addicts Gym",
+    role: "Sole developer",
+    problem: "Client (a strength/powerlifting gym in Embakasi, Nairobi) had no site at all.",
+    outcome: "Shipped a full site covering programs, coaches, membership tiers, and location — a professional presence where there was none.",
+    stack: ["HTML5", "CSS3", "JavaScript"],
+    link: "https://iron-addicts-gym.vercel.app/",
   },
 ];
-
-export const skills = [
-  "TypeScript", "React", "Node.js", "PostgreSQL", "Python", "Vite",
-];
-
-export const about =
-  "One or two paragraphs: background, how you got into building software, " +
-  "what kind of problems you gravitate toward. The engineering/applied-math " +
-  "background is a real differentiator — use it plainly, not as a badge.";
