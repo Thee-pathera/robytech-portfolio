@@ -1,5 +1,5 @@
-import brassHarmony from "../assets/projects/brass-harmony.png";
-import ironAddicts from "../assets/projects/iron-addicts.png";
+const brassHarmony = "/projects/brass-harmony.png";
+const ironAddicts = "/projects/iron-addicts-gym.png";
 
 export const profile = {
   brand: "ROBYTECH",
