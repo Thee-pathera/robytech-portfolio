@@ -1,68 +1,37 @@
 import { motion } from "framer-motion";
+import { ArrowDownRight } from "lucide-react";
 import hero from "../assets/hero.png";
 import { profile } from "../data/content";
-import { ArrowDownRight } from "lucide-react";
+import "../styles/hero.css";
 
 export default function Hero() {
   return (
-    <section
-      id="home"
-      style={{
-        minHeight: "100vh",
-        display: "grid",
-        gridTemplateColumns: "1.1fr .9fr",
-        alignItems: "center",
-        maxWidth: "1300px",
-        margin: "auto",
-        padding: "120px 8%",
-        gap: "80px",
-      }}
-    >
+    <section id="home" className="hero">
       <motion.div
-        initial={{ opacity: 0, y: 80 }}
+        className="hero-content"
+        initial={{ opacity: 0, y: 60 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: .9 }}
+        transition={{ duration: 0.8 }}
       >
-        <div className="glass"
-          style={{
-            display: "inline-flex",
-            padding: "10px 18px",
-            marginBottom: 30,
-            borderRadius: 999,
-          }}
-        >
-          🟢 {profile.availability}
+        <div className="hero-badge">
+          <span className="hero-dot"></span>
+          {profile.availability}
         </div>
 
-        <h1>
+        <h1 className="hero-title">
           Building
           <br />
-          <span className="gradient-text">
-            digital experiences
-          </span>
+          <span className="gradient-text">digital experiences</span>
           <br />
           people remember.
         </h1>
 
-        <p
-          style={{
-            marginTop: 30,
-            fontSize: "1.1rem",
-            maxWidth: 620,
-          }}
-        >
-          I design and build high-performance websites and web
-          applications with a strong focus on speed, user experience,
-          and modern design.
+        <p className="hero-description">
+          I design and build high-performance websites and web applications
+          focused on speed, usability and premium user experiences.
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            gap: 20,
-            marginTop: 40,
-          }}
-        >
+        <div className="hero-buttons">
           <a href="#work" className="btn btn-primary">
             View Projects
           </a>
@@ -74,41 +43,22 @@ export default function Hero() {
       </motion.div>
 
       <motion.div
-        animate={{ y: [-10, 10, -10] }}
+        className="hero-card"
+        animate={{ y: [-8, 8, -8] }}
         transition={{
           duration: 5,
           repeat: Infinity,
         }}
       >
-        <div
-          className="glass"
-          style={{
-            padding: 20,
-            borderRadius: 35,
-          }}
-        >
-          <img
-            src={hero}
-            style={{
-              width: "100%",
-              borderRadius: 25,
-            }}
-          />
+        <img src={hero} className="hero-image" alt={profile.name} />
 
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              marginTop: 20,
-            }}
-          >
-            <div>
-              <h3>{profile.name}</h3>
-              <p>{profile.title}</p>
-            </div>
-
-            <ArrowDownRight size={36}/>
+        <div className="hero-card-footer">
+          <div>
+            <h3>{profile.name}</h3>
+            <p>{profile.title}</p>
           </div>
+
+          <ArrowDownRight size={34} />
         </div>
       </motion.div>
     </section>
