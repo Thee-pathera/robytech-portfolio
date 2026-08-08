@@ -469,4 +469,20 @@ gap:1rem;
 
 margin-top:2rem;
 
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 }
