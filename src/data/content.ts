@@ -105,7 +105,6 @@ export const projects: Project[] = [
 
     link: "https://iron-addicts-gym.vercel.app/",
   },
-,
   {
     id: "03",
 
