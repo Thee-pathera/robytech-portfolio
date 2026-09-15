@@ -1,5 +1,6 @@
 const brassHarmony = "/projects/brass-harmony.png";
 const ironAddicts = "/projects/iron-addicts-gym.png";
+const wCollections = "/projects/w-collections.png";
 
 export const profile = {
   brand: "ROBYTECH",
@@ -103,5 +104,38 @@ export const projects: Project[] = [
     image: ironAddicts,
 
     link: "https://iron-addicts-gym.vercel.app/",
+  },
+,
+  {
+    id: "03",
+
+    title: "W Collections Thrift Shop",
+
+    role: "SEO & Growth",
+
+    year: "2026",
+
+    category: "E-commerce",
+
+    featured: true,
+
+    problem:
+      "The shop had a Google Business Profile but no technical SEO foundation, leaving the site unindexed and invisible in local search.",
+
+    outcome:
+      "Took the shop from unindexed on Google to an actively growing local search presence — 431 Business Profile views and 76 profile interactions tracked since launch, 4.0★ rating.",
+
+    stack: [
+      "Technical SEO",
+      "Google Search Console",
+      "Schema Markup",
+      "Local SEO",
+    ],
+
+    github: "https://github.com/Thee-pathera",
+
+    image: wCollections,
+
+    link: "https://w-collections.vercel.app/",
   },
 ];
