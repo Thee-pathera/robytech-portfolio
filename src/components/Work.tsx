@@ -231,9 +231,17 @@ export default function Work() {
                 </a>
               )}
 
-              <button className="btn btn-secondary">
-                <GitBranch size={18} />
-              </button>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn btn-secondary"
+                  aria-label={`View ${project.title} source code on GitHub`}
+                >
+                  <GitBranch size={18} />
+                </a>
+              )}
 
               <ArrowUpRight
                 size={28}

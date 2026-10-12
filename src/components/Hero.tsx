@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDownRight } from "lucide-react";
-import hero from "../assets/hero.png";
+import hero from "../assets/hero.webp";
 import { profile } from "../data/content";
 import "../styles/hero.css";
 
@@ -45,7 +45,7 @@ export default function Hero() {
       <motion.div
         className="hero-card"
       >
-        <img src={hero} className="hero-image" alt={profile.name} width={800} height={800} fetchPriority="high" />
+        <img src={hero} className="hero-image" alt={profile.name} width={1122} height={1402} fetchPriority="high" />
 
         <div className="hero-card-footer">
           <div>

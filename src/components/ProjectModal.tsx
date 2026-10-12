@@ -65,6 +65,7 @@ export default function ProjectModal({
             >
               <button
                 onClick={onClose}
+                aria-label="Close project details"
                 className="btn btn-secondary"
                 style={{
                   float: "right",
