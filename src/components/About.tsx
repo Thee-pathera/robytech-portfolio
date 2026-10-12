@@ -36,6 +36,9 @@ export default function About() {
           <img
             src={hero}
             alt="Philip Mbeta"
+            width={800}
+            height={800}
+            loading="lazy"
             style={{
               width: "100%",
               borderRadius: "20px",

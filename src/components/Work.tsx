@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt";
 import { ExternalLink, GitBranch, ArrowUpRight } from "lucide-react";
 import { projects, type Project } from "../data/content";
 import ProjectModal from "./ProjectModal";
@@ -64,13 +63,6 @@ export default function Work() {
         }}
       >
         {projects.map((project, index) => (
-          <Tilt
-            key={project.id}
-            glareEnable
-            glareMaxOpacity={0.25}
-            scale={1.03}
-            perspective={2000}
-          >
             <motion.div
               initial={{ opacity: 0, y: 70 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -128,6 +120,9 @@ export default function Work() {
                 .replace(/^-|-$/g, "")}.webp`}
               className="project-image"
               alt={project.title}
+              width={1200}
+              height={750}
+              loading="lazy"
             />
             </div>
 
@@ -249,7 +244,6 @@ export default function Work() {
               />
             </div>
             </motion.div>
-          </Tilt>
         ))}
       </div>
 

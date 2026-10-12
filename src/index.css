@@ -77,7 +77,6 @@ body::after{
 
   right:-250px;
 
-  animation:floatGlow 14s ease-in-out infinite;
 
   z-index:-1;
 }

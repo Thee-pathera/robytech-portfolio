@@ -44,13 +44,8 @@ export default function Hero() {
 
       <motion.div
         className="hero-card"
-        animate={{ y: [-8, 8, -8] }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-        }}
       >
-        <img src={hero} className="hero-image" alt={profile.name} />
+        <img src={hero} className="hero-image" alt={profile.name} width={800} height={800} fetchPriority="high" />
 
         <div className="hero-card-footer">
           <div>

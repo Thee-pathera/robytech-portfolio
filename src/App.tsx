@@ -14,13 +14,15 @@ export default function App() {
       <Background />
       <Navbar />
 
-      <Hero />
-      <TechStack />
-      <About />
-      <Skills />
-      <Experience />
-      <Work />
-      <Contact />
+      <main>
+        <Hero />
+        <TechStack />
+        <About />
+        <Skills />
+        <Experience />
+        <Work />
+        <Contact />
+      </main>
     </>
   );
 }
