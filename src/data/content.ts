@@ -1,6 +1,6 @@
-const brassHarmony = "/projects/brass-harmony.png";
-const ironAddicts = "/projects/iron-addicts-gym.png";
-const wCollections = "/projects/w-collections.png";
+const brassHarmony = "/projects/brass-harmony.webp";
+const ironAddicts = "/projects/iron-addicts-gym.webp";
+const wCollections = "/projects/w-collections.webp";
 
 export const profile = {
   brand: "ROBYTECH",

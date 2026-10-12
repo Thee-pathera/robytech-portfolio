@@ -125,7 +125,7 @@ export default function Work() {
               src={`/projects/${project.title
                 .toLowerCase()
                 .replace(/[^a-z0-9]+/g, "-")
-                .replace(/^-|-$/g, "")}.png`}
+                .replace(/^-|-$/g, "")}.webp`}
               className="project-image"
               alt={project.title}
             />
